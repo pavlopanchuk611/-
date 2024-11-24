@@ -1,0 +1,34 @@
+﻿<Window x:Class="EmailSender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Email Sender" Height="500" Width="600">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="SMTP Email Sender" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Email:"/>
+            <TextBox x:Name="EmailTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Password:"/>
+            <PasswordBox x:Name="PasswordBox" Margin="0,0,0,10"/>
+
+            <Button Content="Login" Click="LoginButton_Click" Margin="0,0,0,20"/>
+
+            <TextBlock Text="To:"/>
+            <TextBox x:Name="ToTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Subject:"/>
+            <TextBox x:Name="SubjectTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Message:"/>
+            <TextBox x:Name="MessageTextBox" Height="100" Margin="0,0,0,10" AcceptsReturn="True"/>
+
+            <CheckBox x:Name="ImportantCheckBox" Content="Mark as Important" Margin="0,0,0,10"/>
+
+            <Button Content="Attach Files" Click="AttachFilesButton_Click" Margin="0,0,0,10"/>
+            <TextBlock x:Name="AttachmentsTextBlock" Text="No files attached" Margin="0,0,0,10"/>
+
+            <Button Content="Send Email" Click="SendEmailButton_Click" IsEnabled="False" x:Name="SendEmailButton"/>
+        </StackPanel>
+    </Grid>
+</Window>
